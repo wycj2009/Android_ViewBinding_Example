@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.activityMainTextviewIntro.text = "This is ViewBinding Example"
+        supportFragmentManager.beginTransaction().add(R.id.activity_main_framelayout_frame, MainFragment.getInstance()).commit()
     }
 
 }
